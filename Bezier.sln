@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bezier.WinForm", "Bezier.WinForm\Bezier.WinForm.csproj", "{81C1117B-E4EA-4551-8EF7-F5D529802262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bezier.Logic", "Bezier.Logic\Bezier.Logic.csproj", "{1DA018B2-A84B-4D7E-81E0-2916C0192F71}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81C1117B-E4EA-4551-8EF7-F5D529802262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C1117B-E4EA-4551-8EF7-F5D529802262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C1117B-E4EA-4551-8EF7-F5D529802262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C1117B-E4EA-4551-8EF7-F5D529802262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA018B2-A84B-4D7E-81E0-2916C0192F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA018B2-A84B-4D7E-81E0-2916C0192F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA018B2-A84B-4D7E-81E0-2916C0192F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA018B2-A84B-4D7E-81E0-2916C0192F71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
