@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Bezier.WinForm
+namespace Bezier.WinForm.Forms
 {
-    public partial class Form1 : Form
+    public partial class BezierIO : Form
     {
-        public Form1()
+        public BezierIO()
         {
             InitializeComponent();
         }
