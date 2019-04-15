@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bezier.Logic.Entities
+﻿namespace Bezier.Logic.Entities
 {
     public interface IBezierParameters
     {

@@ -54,7 +54,7 @@ namespace Bezier.Test.Logic.Application
                 );
             var result = cubicBezierCalculator.Calculate();
             var firstPoint = new Point(40.625, 68.75);
-            Assert.AreEqual(firstPoint.X,result[0].X);
+            Assert.AreEqual(firstPoint.X, result[0].X);
             Assert.AreEqual(firstPoint.Y, result[0].Y);
         }
     }

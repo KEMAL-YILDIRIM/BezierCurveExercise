@@ -1,8 +1,4 @@
-﻿using Bezier.Logic.Entities;
-using Bezier.Logic.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Bezier.Logic.Infrastructure
 {
@@ -13,12 +9,12 @@ namespace Bezier.Logic.Infrastructure
     {
         public double CalculatePointUnit(double[] pointUnits, double interval)
         {
-                double part1 = Math.Pow((1 - interval), 3) * pointUnits[0];
-                double part2 = 3 * Math.Pow((1 - interval), 2) * interval * pointUnits[1];
-                double part3 = 3 * (1 - interval) * Math.Pow(interval, 2) * pointUnits[2];
-                double part4 = Math.Pow(interval, 3) * pointUnits[3];
-                double result = part1 + part2 + part3 + part4;
-                return result;
+            double part1 = Math.Pow((1 - interval), 3) * pointUnits[0];
+            double part2 = 3 * Math.Pow((1 - interval), 2) * interval * pointUnits[1];
+            double part3 = 3 * (1 - interval) * Math.Pow(interval, 2) * pointUnits[2];
+            double part4 = Math.Pow(interval, 3) * pointUnits[3];
+            double result = part1 + part2 + part3 + part4;
+            return result;
         }
     }
 }

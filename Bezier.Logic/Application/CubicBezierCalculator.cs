@@ -1,6 +1,5 @@
 ﻿using Bezier.Logic.Entities;
 using Bezier.Logic.Infrastructure;
-using System;
 
 namespace Bezier.Logic.Application
 {
