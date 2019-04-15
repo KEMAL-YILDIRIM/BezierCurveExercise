@@ -47,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.numericInterval = new System.Windows.Forms.NumericUpDown();
             this.buttonCalculate = new System.Windows.Forms.Button();
+            this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericEndPointY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericEndPointX)).BeginInit();
@@ -229,11 +230,21 @@
             this.buttonCalculate.UseVisualStyleBackColor = true;
             this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
+            // textBoxOutput
+            // 
+            this.textBoxOutput.Location = new System.Drawing.Point(12, 556);
+            this.textBoxOutput.Multiline = true;
+            this.textBoxOutput.Name = "textBoxOutput";
+            this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxOutput.Size = new System.Drawing.Size(932, 108);
+            this.textBoxOutput.TabIndex = 23;
+            // 
             // BezierIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 676);
+            this.Controls.Add(this.textBoxOutput);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.numericInterval);
             this.Controls.Add(this.pictureBoxDisplayBezier);
@@ -280,5 +291,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericInterval;
         private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.TextBox textBoxOutput;
     }
 }

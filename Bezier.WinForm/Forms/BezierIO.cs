@@ -18,6 +18,7 @@ namespace Bezier.WinForm.Forms
 
         private void pictureBoxDisplayBezier_Paint(object sender, PaintEventArgs e)
         {
+            //Get the values from form
             Logic.Entities.Point[] points = {
                     new Logic.Entities.Point(
                         Convert.ToDouble(numericStartPointX.Value),
@@ -53,6 +54,19 @@ namespace Bezier.WinForm.Forms
             .ToArray();
             Graphics g = e.Graphics;
             e.Graphics.DrawLines(SystemPens.Highlight, FloatPoints);
+
+            //This part can be delegate to a log class
+            LogToScreen(generatedPoints);
+        }
+
+        private void LogToScreen(Logic.Entities.Point[] generatedPoints)
+        {
+            string[] generatedPointsStringArray = new string[generatedPoints.Length];
+            for (int indexOfPoints = 0; indexOfPoints < generatedPoints.Length; indexOfPoints++)
+            {
+                generatedPointsStringArray[indexOfPoints] = $"Values of Point [{indexOfPoints}]: X = {generatedPoints[indexOfPoints].X} Y = {generatedPoints[indexOfPoints].Y}";
+            }
+            textBoxOutput.Text = string.Join(Environment.NewLine, generatedPointsStringArray);
         }
 
         private void buttonCalculate_Click(object sender, EventArgs e)
