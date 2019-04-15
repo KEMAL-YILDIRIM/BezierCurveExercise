@@ -4,7 +4,7 @@ using System;
 
 namespace Bezier.Logic.Application
 {
-    public class CubicBezierCalculator : ICalculate, IDisposable
+    public class CubicBezierCalculator : ICalculate
     {
         private ICalculatePointUnit _cubicBezierFormula;
         private IBezierParameters _cubicBezierParameters;
@@ -54,25 +54,6 @@ namespace Bezier.Logic.Application
             }
 
             return _points;
-        }
-
-        // Flag: Has Dispose already been called?
-        bool disposed = false;
-
-        // Public implementation of Dispose pattern callable by consumers.
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        // Protected implementation of Dispose pattern.
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposed)
-                return;
-
-            disposed = true;
         }
     }
 }

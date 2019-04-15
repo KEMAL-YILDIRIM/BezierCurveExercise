@@ -79,6 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Bezier.Logic\Bezier.Logic.csproj">
+      <Project>{1DA018B2-A84B-4D7E-81E0-2916C0192F71}</Project>
+      <Name>Bezier.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
