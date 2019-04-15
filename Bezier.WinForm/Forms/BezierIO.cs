@@ -19,20 +19,9 @@ namespace Bezier.WinForm.Forms
         private void pictureBoxDisplayBezier_Paint(object sender, PaintEventArgs e)
         {
             //Get the values from form
-            Logic.Entities.Point[] points = {
-                    new Logic.Entities.Point(
-                        Convert.ToDouble(numericStartPointX.Value),
-                        Convert.ToDouble(numericStartPointY.Value)),
-                    new Logic.Entities.Point(
-                        Convert.ToDouble(numericControlPoint1X.Value),
-                        Convert.ToDouble(numericControlPoint1Y.Value)),
-                    new Logic.Entities.Point(
-                        Convert.ToDouble(numericControlPoint2X.Value),
-                        Convert.ToDouble(numericControlPoint2Y.Value)),
-                    new Logic.Entities.Point(
-                        Convert.ToDouble(numericEndPointX.Value),
-                        Convert.ToDouble(numericEndPointY.Value)) };
-            int interval = Convert.ToInt32(numericInterval.Value);
+            Logic.Entities.Point[] points;
+            int interval;
+            GetParametersValuesFromForm(out points, out interval);
 
 
             //Using IoC can decouple the dependency here
@@ -57,6 +46,25 @@ namespace Bezier.WinForm.Forms
 
             //This part can be delegate to a log class
             LogToScreen(generatedPoints);
+        }
+
+        private void GetParametersValuesFromForm(out Logic.Entities.Point[] points, out int interval)
+        {
+            points = new Logic.Entities.Point[] {
+                new Logic.Entities.Point(
+                                    Convert.ToDouble(numericStartPointX.Value),
+                                    Convert.ToDouble(numericStartPointY.Value)),
+                new Logic.Entities.Point(
+                                    Convert.ToDouble(numericControlPoint1X.Value),
+                                    Convert.ToDouble(numericControlPoint1Y.Value)),
+                new Logic.Entities.Point(
+                                    Convert.ToDouble(numericControlPoint2X.Value),
+                                    Convert.ToDouble(numericControlPoint2Y.Value)),
+                new Logic.Entities.Point(
+                                    Convert.ToDouble(numericEndPointX.Value),
+                                    Convert.ToDouble(numericEndPointY.Value))
+            };
+            interval = Convert.ToInt32(numericInterval.Value);
         }
 
         private void LogToScreen(Logic.Entities.Point[] generatedPoints)
