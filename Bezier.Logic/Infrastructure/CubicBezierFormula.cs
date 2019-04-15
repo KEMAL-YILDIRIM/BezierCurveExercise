@@ -4,14 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bezier.Logic.Application
+namespace Bezier.Logic.Infrastructure
 {
     /// <summary>
     /// Cubic Bezier Formulation
     /// </summary>
     public sealed class CubicBezierFormula : ICalculatePointUnit
     {
-        public double CalculatePointUnit(double[] pointUnits, int interval)
+        public double CalculatePointUnit(double[] pointUnits, double interval)
         {
                 double part1 = Math.Pow((1 - interval), 3) * pointUnits[0];
                 double part2 = 3 * Math.Pow((1 - interval), 2) * interval * pointUnits[1];

@@ -2,15 +2,15 @@
 
 namespace Bezier.Logic.Entities
 {
-    public class CubicBezierParameters : BezierParameters
+    public class CubicBezierParameters : IBezierParameters
     {
-        public override ICollection<Point> Points => new Point[4];
-
         public CubicBezierParameters(Point[] points, int interval)
         {
-            Points = new Point[4];
             Points = points;
             Interval = interval;
         }
+
+        public Point[] Points { get; }
+        public int Interval { get; }
     }
 }

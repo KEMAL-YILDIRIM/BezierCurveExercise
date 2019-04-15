@@ -2,6 +2,6 @@
 {
     public interface ICalculatePointUnit
     {
-        double CalculatePointUnit(double[] pointUnits, int interval);
+        double CalculatePointUnit(double[] pointUnits, double interval);
     }
 }
