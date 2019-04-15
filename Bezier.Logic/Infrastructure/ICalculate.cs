@@ -1,7 +1,9 @@
-﻿namespace Bezier.Logic.Infrastructure
+﻿using Bezier.Logic.Entities;
+
+namespace Bezier.Logic.Infrastructure
 {
     public interface ICalculate
     {
-        double Calculate();
+        Point[] Calculate();
     }
 }

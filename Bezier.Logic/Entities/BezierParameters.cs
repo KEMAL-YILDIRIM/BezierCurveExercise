@@ -2,15 +2,9 @@
 
 namespace Bezier.Logic.Entities
 {
-    public abstract class BezierParameters
+    public abstract class BezierParameters : IBezierParameters
     {
-        public BezierParameters(List<Point> points, int interval)
-        {
-            Points = points;
-            Interval = interval;
-        }
-
-        public List<Point> Points { get; }
-        public int Interval { get; }
+        public virtual ICollection<Point> Points { get; set; }
+        public int Interval { get; set; }
     }
 }

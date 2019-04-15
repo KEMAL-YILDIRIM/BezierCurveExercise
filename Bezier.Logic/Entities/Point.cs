@@ -1,7 +1,7 @@
 ﻿namespace Bezier.Logic.Entities
 {
     //To ensure that control point will not change once created
-    public class Point
+    public class Point : IPoint
     {
         public Point(double x, double y)
         {
